@@ -11,6 +11,8 @@ output = pd.DataFrame()
 tmp_sentence = []
 for line in tex_data:
     sentences = sent_tokenize(line)
+    if sentences == []:
+        tmp_sentence.append(None)
     for sentence in sentences:
         tmp_sentence.append(sentence)
 
