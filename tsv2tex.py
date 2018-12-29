@@ -16,6 +16,6 @@ for row in tsv_data["source"]:
             if row[-1] == "}":
                 out += "\n"
 
-output_tex = open("output.tex", mode="a")
+output_tex = open(args[2], mode="a")
 output_tex.write(out)
 output_tex.close()

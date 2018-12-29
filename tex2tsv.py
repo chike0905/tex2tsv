@@ -19,6 +19,6 @@ for line in tex_data:
 output["source"] = tmp_sentence
 output["translate"] = [None for a in range(0,len(tmp_sentence))]
 
-output.to_csv("output.tsv", sep='\t')
+output.to_csv(args[2], sep='\t')
 
 tex_data.close()
