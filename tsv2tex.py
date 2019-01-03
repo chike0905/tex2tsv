@@ -10,9 +10,10 @@ tsv_data = pd.read_csv(args[1], delimiter='\t')
 out = ""
 for row in tsv_data["source"]:
         if row != row:
+            out = out[:-1]
             out += "\n\n"
         else:
-            out += row
+            out += row + " "
             if row[-1] == "}":
                 out += "\n"
 
